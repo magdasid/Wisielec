@@ -4,6 +4,7 @@ Program losuje słowo do odgadnięcia. Hasła to znane filmy, bajki i seriale. G
 Gracz przegrywa gdy:
 - wpisze złe słowo 
 - wpisze złą literę 6 razy 
+
 Dla ułatwienia program wypisuje użyte przez gracza litery.
 
 Gra dostępna pod adresem: http://wisielec.azurewebsites.net
