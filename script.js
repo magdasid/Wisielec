@@ -83,3 +83,15 @@ document.getElementById("points").innerText += " "+game.numberOfErrors;
 btnLetter.addEventListener('click', function() { game.checkLetter(inputLetter.value.toLowerCase()) });
 btnWord.addEventListener('click', function() { game.checkWord(inputWord.value) });
 btnNewGame.addEventListener('click', function() { location.reload() });
+inputLetter.addEventListener('keyup', function(event){
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        game.checkLetter(inputLetter.value.toLowerCase())
+    }
+});
+inputWord.addEventListener('keyup', function(event){
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        game.checkWord(inputWord.value);
+    }
+});
