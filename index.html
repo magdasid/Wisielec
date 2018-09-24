@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wisielec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Economica" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>wisielec <i class="fas fa-gamepad"></i></header>
+    <div class="rules">
+        <p>Program losuje słowo do odgadnięcia. <br> Hasła to znane filmy, bajki i seriale. <br>Gracz moze zgadywać litery lub całe słowa. <br>Gracz przegrywa jeśli wpisze złe słowo lub złą literę 6 razy. <br>Program wypisuje użyte litery.</p>
+    </div>
+    <div id="board">
+        
+    </div>
+    <div id="errors">
+        <p id="points">Nieudane próby:  </p>
+        <p id="used-letters">Użyte litery:</p>
+        <p id="error-message"></p>
+    </div>
+    <div id="answers">
+        <input id="letter" placeholder="wpisz literę" type="text">
+        <input id="check-letter" type="button" value="sprawdź literę">
+        <input id="word" placeholder="wpisz wyraz" type="text">
+        <input id="check-word" type="button" value="sprawdź wyraz">  
+    </div>
+    <div id="new-game">
+        <input id="btn-newgame" type="button" value="nowa gra">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
