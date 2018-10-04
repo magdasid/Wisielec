@@ -7,4 +7,6 @@ Gracz przegrywa gdy:
 
 Dla ułatwienia program wypisuje użyte przez gracza litery.
 
+ ![alt text](https://raw.githubusercontent.com/magdasid/Wisielec/master/photo.png)
+
 Gra dostępna pod adresem: http://wisielec.azurewebsites.net
