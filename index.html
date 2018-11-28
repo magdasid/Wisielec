@@ -11,27 +11,29 @@
 
 </head>
 <body>
-    <header>wisielec <i class="fas fa-gamepad"></i></header>
-    <div class="rules">
-        <p>Program losuje słowo do odgadnięcia. <br> Hasła to znane filmy, bajki i seriale. <br>Gracz moze zgadywać litery lub całe słowa. <br>Gracz przegrywa jeśli wpisze złe słowo lub złą literę 6 razy. <br>Program wypisuje użyte litery.</p>
-    </div>
-    <div id="board">
-        
-    </div>
-    <div id="errors">
-        <p id="points">Nieudane próby:  </p>
-        <p id="used-letters">Użyte litery:</p>
-        <p id="error-message"></p>
-    </div>
-    <div id="answers">
-        <input id="letter" placeholder="wpisz literę" type="text">
-        <input id="check-letter" type="button" value="sprawdź literę">
-        <input id="word" placeholder="wpisz wyraz" type="text">
-        <input id="check-word" type="button" value="sprawdź wyraz">  
-    </div>
-    <div id="new-game">
-        <input id="btn-newgame" type="button" value="nowa gra">
-    </div>
+    <header class="game-header">
+        wisielec <i class="fas fa-gamepad"></i>
+    </header>
+    <main class="game-content">
+        <section class="rules-section">
+            <p class="rules-section__description">Program losuje słowo do odgadnięcia. <br> Hasła to znane filmy, bajki i seriale. <br>Gracz moze zgadywać litery lub całe słowa. <br>Gracz przegrywa jeśli wpisze złe słowo lub złą literę 6 razy. <br>Program wypisuje użyte litery.</p>
+        </section>
+        <section id="board" class="board-section"></section>
+        <section class="errors-section">
+            <p id="points" class="errors-section__paragraph">Nieudane próby:  </p>
+            <p id="used-letters" class="errors-section__paragraph">Użyte litery:</p>
+            <p id="error-message" class="errors-section__paragraph errors-section__paragraph--pink"></p>                    
+        </section>
+        <section class="answers-section">
+            <input id="letter" class="field" placeholder="wpisz literę" type="text">
+            <input id="check-letter" class="button" type="button" value="sprawdź literę">
+            <input id="word" class="field" placeholder="wpisz wyraz" type="text">
+            <input id="check-word" class="button" type="button" value="sprawdź wyraz">  
+        </section>
+        <div class="new-game-section">
+            <input id="btn-newgame" class="button" type="button" value="nowa gra">
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

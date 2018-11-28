@@ -1,62 +1,56 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0 auto;
     width: 60%;
     font-family: 'Cantarell', sans-serif;
 }
-header {
+.game-header {
     font-family: 'Economica', sans-serif;
     font-size: 100px;
     margin: 5px;
 }
-#board {
+.board-section {
     margin: 0 auto;
     width: 90%;
     text-align: center;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
-.boardField {
+.board-section__field {
     height: 50px;
     width: 50px;
     background-color:lightblue;
     color: white;
     font-weight: bold;
-    align-content: center;
-    float: left;
     font-size: 30px;
     margin: 5px;
 }
-#errors {
-    height: 80px;
-    clear: both;
-}
-#points {
+.errors-section__paragraph {
     height: 10px;
     color: black;
 }
-#error-message {
-    height: 20px;
+.errors-section__paragraph--pink {
     color: #FF9494;
 }
-#used-letters {
-    height: 10px;
-    color: black;
-}
-#new-game {
+.new-game-section {
     margin: 10px;
     text-align: center;
 }
-#answer {
+.answer-section {
     padding-top: 15px;
     text-align: center;
 }
-input[type=text] {
+.field {
     width: 70%;
     padding: 5px 5px;
     margin: 3px 0;
     border: 2px solid gainsboro;
     border-radius: 4px;
 }
-input[type=button] {
+.button {
     color: gray;
     background-color: gainsboro;
     width: 20%;
@@ -65,7 +59,7 @@ input[type=button] {
     border: 2px solid gainsboro;
     border-radius: 4px; 
 }
-input[type=button]:hover {
+.button:hover {
     background-color: rgba(220, 220, 220, 0.598);
 }
 
@@ -74,24 +68,21 @@ input[type=button]:hover {
     body {
         width: 95%;
     }
-    header {
+    .game-header  {
         text-align: center;
     }
-    .boardField {
+    .board-section__field {
         width: 40px;
         height: 40px;
         margin: 2px;
     }
-    input[type=text] {
+    .field {
         width: 60%;
     }
-    input[type=button] {
+    .button {
         width: 30%; 
     }
-    #errors {
+    .errors-section {
         height: 100px;
-    }
-    #error-message {
-        height: 40px;
     }
 }

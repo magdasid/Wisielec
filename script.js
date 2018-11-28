@@ -8,7 +8,7 @@ let game = (function() {
     let drawBoard = () => {
         for (let i=0; i<wordLength; i++) {
             let div = document.createElement("div");
-            div.classList.add("boardField");
+            div.classList.add("board-section__field");
             div.classList.add("class"+i);
             document.getElementById("board").appendChild(div);
         }
@@ -79,7 +79,6 @@ let inputWord = document.getElementById("word");
 let btnNewGame = document.getElementById("btn-newgame");
 
 document.getElementById("points").innerText += " "+game.numberOfErrors;
-
 btnLetter.addEventListener('click', function() { game.checkLetter(inputLetter.value.toLowerCase()) });
 btnWord.addEventListener('click', function() { game.checkWord(inputWord.value) });
 btnNewGame.addEventListener('click', function() { location.reload() });
