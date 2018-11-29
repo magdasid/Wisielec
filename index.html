@@ -16,11 +16,17 @@
     </header>
     <main class="game-content">
         <section class="rules-section">
-            <p class="rules-section__description">Program losuje słowo do odgadnięcia. <br> Hasła to znane filmy, bajki i seriale. <br>Gracz moze zgadywać litery lub całe słowa. <br>Gracz przegrywa jeśli wpisze złe słowo lub złą literę 6 razy. <br>Program wypisuje użyte litery.</p>
+            <p class="rules-section__description">Program losuje słowo do odgadnięcia. <br>
+                Hasła to znane filmy, bajki i seriale. <br>
+                Gracz moze zgadywać litery lub całe słowa. <br>
+                Gracz przegrywa jeśli wpisze złe słowo lub złą literę 6 razy. <br>
+                Program wypisuje użyte litery. <br>
+                Możesz poprosić o odpowiedź, ale tracisz jedną próbę. 
+            </p>
         </section>
         <section id="board" class="board-section"></section>
         <section class="errors-section">
-            <p id="points" class="errors-section__paragraph">Nieudane próby:  </p>
+            <p id="points" class="errors-section__paragraph">Pozostałe próby:  </p>
             <p id="used-letters" class="errors-section__paragraph">Użyte litery:</p>
             <p id="error-message" class="errors-section__paragraph errors-section__paragraph--pink"></p>                    
         </section>
@@ -31,6 +37,7 @@
             <input id="check-word" class="button" type="button" value="sprawdź wyraz">  
         </section>
         <div class="new-game-section">
+            <input id="btn-get-clue" class="button" type="button" value="podpowiedź"> 
             <input id="btn-newgame" class="button" type="button" value="nowa gra">
         </div>
     </main>

@@ -3,8 +3,8 @@ let game = (function() {
     let randomIndex = Math.floor(Math.random() * words.length);
     let gameWord = words[randomIndex];
     let wordLength = gameWord.length;
-    let numberOfErrors = 0;
-    let usedLetters = [];
+    let numberOfErrors = 6;
+    let userAnswers = [];
     let drawBoard = () => {
         for (let i=0; i<wordLength; i++) {
             let div = document.createElement("div");
@@ -21,6 +21,7 @@ let game = (function() {
         else {
             for (let j=0; j<gameWord.length; j++) {
                 if(gameWord[j] === letter) {
+                    userAnswers.push(letter);
                     let className = "class"+j;
                     document.getElementsByClassName(className)[0].innerHTML = letter;
                 }     
@@ -28,13 +29,23 @@ let game = (function() {
             if (gameWord.includes(letter) === false){
                 addPoints();
                 document.getElementById("used-letters").innerHTML += " "+letter;
-                if (numberOfErrors===6) {
+                if (numberOfErrors===0) {
                     document.getElementById("error-message").innerHTML = "Przegrywasz! " + "<i class='fas fa-frown'></i>" + " Poprawny tytuł to: " + gameWord;
                     blockInputs();
                 } else {
                     document.getElementById("error-message").innerHTML = "Brak litery " + letter + " w słowie!";
                 }
             }
+        }
+    };
+    let getClue = () => {
+        let randomIndex = Math.floor(Math.random() * gameWord.length);
+        console.log(userAnswers);
+        if(userAnswers.indexOf(gameWord[randomIndex]) === -1) {
+            checkLetter(gameWord[randomIndex]);
+            addPoints();
+        } else {
+            getClue();
         }
     };
     let checkWord = (word) => {
@@ -53,7 +64,7 @@ let game = (function() {
         }
     };
     let addPoints = () => {
-        numberOfErrors+=1;
+        numberOfErrors-=1;
         document.getElementById("points").innerText = "Nieudane próby: "+numberOfErrors;
     }
     let blockInputs = () => {
@@ -66,7 +77,8 @@ let game = (function() {
         drawBoard: drawBoard,
         checkLetter: checkLetter,
         checkWord: checkWord,
-        numberOfErrors: numberOfErrors
+        numberOfErrors: numberOfErrors,
+        getClue: getClue
     }
 })();
 
@@ -77,10 +89,12 @@ let inputLetter = document.getElementById("letter");
 let btnWord = document.getElementById("check-word");
 let inputWord = document.getElementById("word");
 let btnNewGame = document.getElementById("btn-newgame");
+let btnClue = document.getElementById("btn-get-clue");
 
 document.getElementById("points").innerText += " "+game.numberOfErrors;
 btnLetter.addEventListener('click', function() { game.checkLetter(inputLetter.value.toLowerCase()) });
 btnWord.addEventListener('click', function() { game.checkWord(inputWord.value) });
+btnClue.addEventListener('click', function() { game.getClue() });
 btnNewGame.addEventListener('click', function() { location.reload() });
 inputLetter.addEventListener('keyup', function(event){
     event.preventDefault();
