@@ -6,6 +6,7 @@ Gracz przegrywa gdy:
 - wpisze złą literę 6 razy 
 
 Dla ułatwienia program wypisuje użyte przez gracza litery.
+Użytkownik może skorzystać z podpowiedzi, jednak traci jedną z sześciu prób.
 
 Widok gry:
 
