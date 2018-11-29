@@ -12,12 +12,11 @@ body {
     margin: 5px;
 }
 .board-section {
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-    align-items: center;
+    width: 100%;    
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 .board-section__field {
     height: 50px;
@@ -62,14 +61,10 @@ body {
 .button:hover {
     background-color: rgba(220, 220, 220, 0.598);
 }
-
 /* mobile version */
 @media only screen and (max-width: 800px) {
     body {
         width: 95%;
-    }
-    .game-header  {
-        text-align: center;
     }
     .board-section__field {
         width: 40px;
@@ -81,8 +76,5 @@ body {
     }
     .button {
         width: 30%; 
-    }
-    .errors-section {
-        height: 100px;
     }
 }
